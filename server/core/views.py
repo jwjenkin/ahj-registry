@@ -158,7 +158,7 @@ class AHJList(generics.ListAPIView):
     permission_classes = (permissions.IsAuthenticated, IsSuperUserOrReadOnly)
     filter_class = AHJFilter
     filter_backends = [SearchFilter, DjangoFilterBackend]
-    search_fields = ['AHJName', 'address__City', 'address__County', 'address__Country', 'address__StateProvince', 'address__ZipPostalCode']
+    search_fields = ['AHJID', 'AHJName', 'address__City', 'address__County', 'address__Country', 'address__StateProvince', 'address__ZipPostalCode']
 
     def list(self, request, *args, **kwargs):
         """
